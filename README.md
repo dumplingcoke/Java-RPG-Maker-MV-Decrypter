@@ -19,7 +19,7 @@ https://gitlab.com/Petschko/Java-RPG-Maker-MV-Decrypter
 ## 这是什么？
 本项目用于解密RPG-Maker-MV/MZ通过内置加密功能加密的资源文件。
 
-该项目还能解密整个RPG项目目录。它与[我之前的项目](https://gitlab.com/Petschko/RPG-Maker-MV-Decrypter)类似，但使用更加便捷。
+该项目还能解密整个RPG项目目录。它与[作者之前的项目](https://gitlab.com/Petschko/RPG-Maker-MV-Decrypter)类似，但使用更加便捷。
 
 ### 该程序能解密哪些文件？
 可以解密RPG Maker MV或MZ内置加密的文件。这些文件通常具有以下扩展名：`.rpgmvp`、`.rpgmvm`、`.rpgmvo`、`.png_`、`.m4a_` 或 `.ogg_`。
@@ -37,7 +37,7 @@ https://gitlab.com/Petschko/Java-RPG-Maker-MV-Decrypter
 
 ## 使用方法
 ### （常规）图形界面操作
-- 双击JAR文件即可启动程序 *（若无法启动可尝试使用BAT文件 - 仅限Windows）*
+- 双击JAR文件即可启动程序 *（若无法启动可尝试下载原作者的英文版，并且使用start.bat文件进行启动 - 仅限Windows）*
 - 点击菜单栏"文件"中的"选择RPG MV/MZ项目..."
   - 浏览至需要解密的RPG-Maker MV项目目录
   - 选择项目主目录（包含Game.exe的文件夹）后点击右下角的"打开"
@@ -50,8 +50,8 @@ https://gitlab.com/Petschko/Java-RPG-Maker-MV-Decrypter
 
 - （尚未实现）也可以解密单个/多个文件 - 在"Project-Files"标签页选中文件后，点击"Decrypter" -> "Selected Files"
 - 还可以重新加密文件（例如为游戏翻译图片文字后）
-- 可以通过"Option"菜单检查设置是否符合需求 =)
-- （尚未实现）"Info"菜单中也可查看本"使用说明"
+- 可以通过"选项"菜单检查设置是否符合需求 =)
+- （尚未实现）"信息"菜单中也可查看本"使用说明"
 
 ### 命令行运行 - 适用于自动化操作/命令行爱好者 :3
 
