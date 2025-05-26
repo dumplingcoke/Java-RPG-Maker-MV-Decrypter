@@ -2,6 +2,8 @@
 
 复刻自 [Petschko/Java-RPG-Maker-MV-Decrypter](https://github.com/Petschko/Java-RPG-Maker-MV-Decrypter)
 
+[下载汉化版本](https://github.com/dumplingcoke/Java-RPG-Maker-MV-Decrypter/releases)
+
 ----
 
 # 重要：项目已迁移至 [Gitlab.com](https://gitlab.com/Petschko/Java-RPG-Maker-MV-Decrypter)
@@ -27,7 +29,7 @@ https://gitlab.com/Petschko/Java-RPG-Maker-MV-Decrypter
 - 支持任何操作系统（Linux、Windows、IOS等）
 
 ## 安装
-- [下载此ZIP包（!!Alpha版!!）- 版本：0.4.2](https://petschko.org/upload/projects/java-rpg-maker-decrypter/RPG_Maker_MV_Decrypter_jar_0.4.2.zip) 或克隆/下载项目后自行构建JAR文件
+- [下载ZIP包（!原作者的!!!Alpha版!!）- 版本：0.4.2](https://petschko.org/upload/projects/java-rpg-maker-decrypter/RPG_Maker_MV_Decrypter_jar_0.4.2.zip) 或克隆/下载项目后自行构建JAR文件
 - 将文件放置于任意位置（如果下载的是ZIP包，别忘了解压）
 
 ### 依赖项（仅自行构建JAR时需要）
