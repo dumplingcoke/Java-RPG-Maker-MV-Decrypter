@@ -6,7 +6,7 @@
 
 # 重要：项目已迁移至 [Gitlab.com](https://gitlab.com/Petschko/Java-RPG-Maker-MV-Decrypter)
 
-请前往该地址查看更新/提交错误报告 - 本Github仓库现已转为只读模式
+请前往该地址查看更新/提交错误报告 - 作者的Github仓库已转为只读模式
 
 https://gitlab.com/Petschko/Java-RPG-Maker-MV-Decrypter
 
@@ -28,7 +28,7 @@ https://gitlab.com/Petschko/Java-RPG-Maker-MV-Decrypter
 
 ## 安装
 - [下载此ZIP包（!!Alpha版!!）- 版本：0.4.2](https://petschko.org/upload/projects/java-rpg-maker-decrypter/RPG_Maker_MV_Decrypter_jar_0.4.2.zip) 或克隆/下载项目后自行构建JAR文件
-- 将文件放置于任意位置（如果下载的是ZIP包，别忘了解压哦 xP）
+- 将文件放置于任意位置（如果下载的是ZIP包，别忘了解压）
 
 ### 依赖项（仅自行构建JAR时需要）
 - [org.json](https://github.com/douglascrockford/JSON-java)
@@ -36,15 +36,15 @@ https://gitlab.com/Petschko/Java-RPG-Maker-MV-Decrypter
 ## 使用方法
 ### （常规）图形界面操作
 - 双击JAR文件即可启动程序 *（若无法启动可尝试使用BAT文件 - 仅限Windows）*
-- 点击菜单栏"File"中的"Open"
+- 点击菜单栏"文件"中的"选择RPG MV/MZ项目..."
   - 浏览至需要解密的RPG-Maker MV项目目录
-  - 选择项目主目录（包含Game.exe的文件夹）后点击"Choose Directory"
-    - 也可以将程序直接放在游戏目录内，然后选择"Select Project from current Directory"选项
+  - 选择项目主目录（包含Game.exe的文件夹）后点击右下角的"打开"
+    - 也可以将程序直接放在游戏目录内，然后选择"从当前目录中选择项目"选项
 - 稍等片刻 =)
 - 如果文件列表已显示且解密密钥已填入文本框，即可开始解密
-  - 点击菜单栏"Decrypt" -> "All Files"
+  - 点击菜单栏"解密" -> "全部文件"
   - 稍等片刻即可完成 =)
-  - 解密后的文件将保存在程序所在目录的"Output"文件夹中 *（如未通过"File" -> "Change Output-Directory..."修改输出路径）*
+  - 解密后的文件将保存在程序所在目录的"Output"文件夹中 *（如果你没有通过"文件" -> "更改输出目录..."修改输出路径的话）*
 
 - （尚未实现）也可以解密单个/多个文件 - 在"Project-Files"标签页选中文件后，点击"Decrypter" -> "Selected Files"
 - 还可以重新加密文件（例如为游戏翻译图片文字后）
