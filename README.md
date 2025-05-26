@@ -1,3 +1,7 @@
+# 复刻说明：本人仅提供汉化，所有链接均跳转至原作者项目
+
+----
+
 # 重要：项目已迁移至 [Gitlab.com](https://gitlab.com/Petschko/Java-RPG-Maker-MV-Decrypter)
 
 请前往该地址查看更新/提交错误报告 - 本Github仓库现已转为只读模式
