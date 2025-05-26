@@ -1,6 +1,6 @@
 # 复刻说明：本人仅提供汉化，所有链接均跳转至原作者项目
 
-复刻自 Petschko/Java-RPG-Maker-MV-Decrypter
+复刻自 [Petschko/Java-RPG-Maker-MV-Decrypter](https://github.com/Petschko/Java-RPG-Maker-MV-Decrypter)
 
 ----
 
