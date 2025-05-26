@@ -95,62 +95,62 @@ class Menu extends JMenuBar {
 	 * Creates the File-Menu
 	 */
 	private void constructFileMenu() {
-		this.file = new JMenu("File");
+		this.file = new JMenu("文件");
 
 		// Sub-Items
-		this.open = new JMenuItem("Select RPG MV/MZ Project...");
-		this.openCurrentDir = new JMenuItem("Select Project from current Directory");
-		this.openCurrentDirDecrypt = new JMenuItem("Select Project from current Dir & Decrypt");
-		this.openCurrentDirEncrypt = new JMenuItem("Select Project from current Dir & Encrypt...");
-		this.changeOutputDir = new JMenuItem("Change Output-Directory...");
-		this.changeOutputDirToCurrent = new JMenuItem("Change Output-Directory to current Directory");
-		this.openRPGDirExplorer = new JMenuItem("Show RPG-Dir in Explorer");
-		this.openOutputDirExplorer = new JMenuItem("Show Output-Dir in Explorer");
-		this.closeRPGProject = new JMenuItem("Close RPG MV/MZ Project");
-		this.exit = new JMenuItem("Exit");
+		this.open = new JMenuItem("选择 RPG MV/MZ 项目...");
+		this.openCurrentDir = new JMenuItem("从当前目录中选择项目");
+		this.openCurrentDirDecrypt = new JMenuItem("从当前目录中选择项目并解密");
+		this.openCurrentDirEncrypt = new JMenuItem("从当前目录中选择项目并加密...");
+		this.changeOutputDir = new JMenuItem("更改输出目录...");
+		this.changeOutputDirToCurrent = new JMenuItem("将输出目录更改为当前目录");
+		this.openRPGDirExplorer = new JMenuItem("在资源管理器中显示RPG目录");
+		this.openOutputDirExplorer = new JMenuItem("在资源管理器中显示输出目录");
+		this.closeRPGProject = new JMenuItem("关闭RPG MV/MZ项目");
+		this.exit = new JMenuItem("退出");
 	}
 
 	/**
 	 * Creates the Options-Menu
 	 */
 	private void constructOptionsMenu() {
-		this.options = new JMenu("Options");
+		this.options = new JMenu("选项");
 
 		// Sub-Items
-		this.ignoreFakeHeader = new JCheckBoxMenuItem("Ignore Fake-Header (Faster)");
-		this.loadInvalidRPGDirs = new JCheckBoxMenuItem("Load invalid RPG-MV-Dirs anyway");
-		this.clearOutputDir = new JCheckBoxMenuItem("Clear output Dir before Decrypt");
-		this.overwriteExistingFiles = new JCheckBoxMenuItem("Overwrite existing Files");
-		this.checkForUpdates = new JCheckBoxMenuItem("Auto check for Updates");
+		this.ignoreFakeHeader = new JCheckBoxMenuItem("忽略伪文件头（更快）");
+		this.loadInvalidRPGDirs = new JCheckBoxMenuItem("强制加载无效的RPG-MV目录");
+		this.clearOutputDir = new JCheckBoxMenuItem("解密前清空输出目录");
+		this.overwriteExistingFiles = new JCheckBoxMenuItem("覆盖现有文件");
+		this.checkForUpdates = new JCheckBoxMenuItem("自动检查更新");
 	}
 
 	/**
 	 * Creates the Decrypt-Menu
 	 */
 	private void constructDecryptMenu() {
-		this.decrypt = new JMenu("Decrypt");
+		this.decrypt = new JMenu("解密");
 
-		// Sub-Items
-		this.selectedFiles = new JMenuItem("Selected Files");
-		this.allFiles = new JMenuItem("All Files");
-		this.restoreImages = new JMenuItem("Restore Images (No Key)");
-		this.setEncryptionKey = new JMenuItem("Set Encryption-Key...");
-		this.setEncryptionFile = new JMenuItem("Key from Encrypted-PNG-File...");
-		this.changeDecrypterSignature = new JMenuItem("Change Header-Values...");
-		this.resetHeaderToDefault = new JMenuItem("Reset Header-Values");
+		// 子菜单项
+		this.selectedFiles = new JMenuItem("所选文件");
+		this.allFiles = new JMenuItem("全部文件");
+		this.restoreImages = new JMenuItem("恢复图像(无密钥)");
+		this.setEncryptionKey = new JMenuItem("设置加密密钥...");
+		this.setEncryptionFile = new JMenuItem("从加密PNG文件获取密钥...");
+		this.changeDecrypterSignature = new JMenuItem("修改文件头标识...");
+		this.resetHeaderToDefault = new JMenuItem("重置文件头标识");
 	}
 
 	/**
 	 * Creates the Encrypt-Menu
 	 */
 	private void constructEncryptMenu() {
-		this.encrypt = new JMenu("Encrypt");
+		this.encrypt = new JMenu("加密");
 
-		// Sub-Items
-		this.encryptSelectedFilesMV = new JMenuItem("Selected Files (to MV)");
-		this.encryptAllFilesMV = new JMenuItem("All Files (to MV)");
-		this.encryptSelectedFilesMZ = new JMenuItem("Selected Files (to MZ)");
-		this.encryptAllFilesMZ = new JMenuItem("All Files (to MZ)");
+		// 子菜单项
+		this.encryptSelectedFilesMV = new JMenuItem("加密所选文件(MV格式)");
+		this.encryptAllFilesMV = new JMenuItem("加密全部文件(MV格式)");
+		this.encryptSelectedFilesMZ = new JMenuItem("加密所选文件(MZ格式)"); 
+		this.encryptAllFilesMZ = new JMenuItem("加密全部文件(MZ格式)");
 		this.setEncryptionKeyE = new JMenuItem(this.setEncryptionKey.getText());
 		this.setEncryptionFileE = new JMenuItem(this.setEncryptionFile.getText());
 		this.changeDecrypterSignatureE = new JMenuItem(this.changeDecrypterSignature.getText());
@@ -161,24 +161,24 @@ class Menu extends JMenuBar {
 	 * Creates the Tools-Menu
 	 */
 	private void constructToolsMenu() {
-		this.tools = new JMenu("Tools");
+		this.tools = new JMenu("工具");
 
-		this.detectKeyFromEncryptedImg = new JMenuItem("Extract Key from .rpgmvp/.png_ File");
-		this.restoreProjectMV = new JMenuItem("Restore-Project (MV) (Experimental)");
-		this.restoreProjectMZ = new JMenuItem("Restore-Project (MZ) (Experimental)");
-		this.doClearOutputDir = new JMenuItem("Clear Output-Dir now");
+		this.detectKeyFromEncryptedImg = new JMenuItem("从.rpgmvp/.png_文件提取密钥");
+		this.restoreProjectMV = new JMenuItem("恢复项目(MV)(实验性功能)");
+		this.restoreProjectMZ = new JMenuItem("恢复项目(MZ)(实验性功能)"); 
+		this.doClearOutputDir = new JMenuItem("立即清空输出目录");
 	}
 
 	/**
 	 * Creates the Info-Menu
 	 */
 	private void constructInfoMenu() {
-		this.info = new JMenu("Info");
+		this.info = new JMenu("信息");
 
-		this.help = new JMenuItem("Help");
-		this.updateProgram = new JMenuItem("Check for Updates");
-		this.reportABug = new JMenuItem("Report a Bug...");
-		this.about = new JMenuItem("About");
+		this.help = new JMenuItem("帮助");
+		this.updateProgram = new JMenuItem("检查更新"); 
+		this.reportABug = new JMenuItem("报告问题...");
+		this.about = new JMenuItem("关于");
 	}
 
 	/**

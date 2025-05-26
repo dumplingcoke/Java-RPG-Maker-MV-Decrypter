@@ -77,11 +77,11 @@ class WorkerOpenRPGDir extends SwingWorker<Void, Void> {
 			);
 		} catch(PathException e) {
 			ErrorWindow errorWindow = new ErrorWindow(
-					e.getMessage() + Const.NEW_LINE +
-							"You can turn on the Option \"Load invalid RPG-Dirs anyway\" if your Directory is a RPG-Dir but it not detect it correctly." + Const.NEW_LINE +
-							"Warning: Turning on the Option may cause incorrect results.",
-					ErrorWindow.ERROR_LEVEL_WARNING,
-					false
+				e.getMessage() + Const.NEW_LINE +
+				"如果您的目录确实是RPG项目目录但未被正确识别，可以启用\"强制加载无效的RPG-MV目录\"选项。" + Const.NEW_LINE +
+				"警告：启用此选项可能导致结果不正确。",
+				ErrorWindow.ERROR_LEVEL_WARNING,
+				false
 			);
 			errorWindow.show(gui.getMainWindow());
 
@@ -148,34 +148,34 @@ class WorkerOpenRPGDir extends SwingWorker<Void, Void> {
 			gui.projectInfo.refresh();
 			gui.getMainWindow().pack();
 
-			// Done
+			// 完成
 			if(this.showInfoWindow || this.showImportantMessages) {
 				if(keyFound && this.showInfoWindow) {
 					InfoWindow infoWindow = new InfoWindow(
-							"RPG-Maker Project loaded..." + Const.NEW_LINE + Const.NEW_LINE +
-							"Please use one of these options:" + Const.NEW_LINE +
-							"- \"Decrypt\" -> \"All Files\" to Decrypt." + Const.NEW_LINE +
-							"- \"Decrypt\" -> \"Restore Images (No Key)\" for restoring."
+							"RPG-Maker项目已加载..." + Const.NEW_LINE + Const.NEW_LINE +
+							"请选择以下操作之一:" + Const.NEW_LINE +
+							"- \"解密\" -> \"全部文件\" 进行解密" + Const.NEW_LINE +
+							"- \"解密\" -> \"恢复图像(无密钥)\" 进行恢复"
 					);
 					infoWindow.show(gui.getMainWindow());
-				} else if(! keyFound) {
-					String text = "RPG-Maker Project loaded..." + Const.NEW_LINE + Const.NEW_LINE +
-							"Key not Found... You can set it manually under:" + Const.NEW_LINE +
-							"- \"Decrypt\" -> \"Set Encryption-Key...\" or " + Const.NEW_LINE +
-							"- \"Encrypt\" -> \"Set Encryption-Key...\"" + Const.NEW_LINE + Const.NEW_LINE +
-							"You can also still restore the images without the Key:" + Const.NEW_LINE +
-							"- \"Decrypt\" -> \"Restore Images (No Key)\" for restoring.";
+				} else if(!keyFound) {
+					String text = "RPG-Maker项目已加载..." + Const.NEW_LINE + Const.NEW_LINE +
+							"未找到密钥...您可以手动设置:" + Const.NEW_LINE +
+							"- \"解密\" -> \"设置加密密钥...\" 或" + Const.NEW_LINE +
+							"- \"加密\" -> \"设置加密密钥...\"" + Const.NEW_LINE + Const.NEW_LINE +
+							"您仍可以在没有密钥的情况下恢复图像:" + Const.NEW_LINE +
+							"- \"解密\" -> \"恢复图像(无密钥)\" 进行恢复";
 
 					if(gui.getRpgProject().getEncryptedFiles().size() > 0) {
 						Object[] options = {
-								"Detect from Image",
-								"Ok"
+								"从图像检测",
+								"确定"
 						};
 						int answer = JOptionPane.showOptionDialog(
 								gui.getMainWindow(),
 								text + Const.NEW_LINE + Const.NEW_LINE +
-								"You can also Auto-Detect the Key from images.",
-								"Project loaded without Key",
+								"您也可以从图像自动检测密钥。",
+								"项目加载但未找到密钥",
 								JOptionPane.YES_NO_OPTION,
 								JOptionPane.WARNING_MESSAGE,
 								null,
@@ -188,7 +188,7 @@ class WorkerOpenRPGDir extends SwingWorker<Void, Void> {
 								gui.getDecrypter().detectEncryptionKeyFromImage(gui.getRpgProject().getEncryptedImgFile());
 							} catch(Exception e) {
 								ErrorWindow errorWindow = new ErrorWindow(
-										"Could not find the Key from Images...",
+										"无法从图像中找到密钥...",
 										ErrorWindow.ERROR_LEVEL_ERROR,
 										false,
 										e

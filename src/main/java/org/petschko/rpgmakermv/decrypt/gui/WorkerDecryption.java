@@ -45,7 +45,7 @@ class WorkerDecryption extends WorkerEncryption implements ActionListener {
 	 */
 	@Override
 	protected void init() {
-		this.progressMonitor = new ProgressMonitor(gui.getMainWindow(), this.restoreImages ? "Restoring..." : "Decrypting...", "Preparing...", 0, this.files.size());
+		this.progressMonitor = new ProgressMonitor(gui.getMainWindow(), this.restoreImages ? "正在恢复中..." : "正在解密...", "准备中...", 0, this.files.size());
 		this.progressMonitor.setProgress(0);
 	}
 
@@ -134,23 +134,23 @@ class WorkerDecryption extends WorkerEncryption implements ActionListener {
 		}
 
 		if(this.isCancelled()) {
-			System.out.println("Cancelled...");
+			System.out.println("已取消...");
 
 			InfoWindow infoWindow;
 			if(this.restoreImages)
-				infoWindow = new InfoWindow("Restoring canceled!");
+				infoWindow = new InfoWindow("恢复操作已取消!");
 			else
-				infoWindow = new InfoWindow("Decryption canceled!");
+				infoWindow = new InfoWindow("解密操作已取消!");
 
 			infoWindow.show(gui.getMainWindow());
 		} else {
-			System.out.println("Done.");
+			System.out.println("已完成。");
 
 			InfoWindow infoWindow;
 			if(this.restoreImages)
-				infoWindow = new InfoWindow("Images are restored! ^-^");
+				infoWindow = new InfoWindow("图像已恢复！ ^-^");
 			else
-				infoWindow = new InfoWindow("Decryption complete! =)");
+				infoWindow = new InfoWindow("解密完成！ =)");
 
 			infoWindow.show(gui.getMainWindow());
 		}

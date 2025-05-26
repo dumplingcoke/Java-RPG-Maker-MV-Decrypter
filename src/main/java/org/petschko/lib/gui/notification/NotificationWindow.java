@@ -177,20 +177,20 @@ abstract class NotificationWindow {
 	protected void setDefaultTitle() {
 		switch(this.errorLevel) {
 			case ERROR_LEVEL_NOTICE:
-				this.title = "Notice";
+				this.title = "提示";
 				break;
 			case ERROR_LEVEL_WARNING:
-				this.title = "Warning";
+				this.title = "警告"; 
 				break;
 			case ERROR_LEVEL_ERROR:
-				this.title = "Error";
+				this.title = "错误";
 				break;
 			case ERROR_LEVEL_FATAL:
-				this.title = "Fatal-Error";
+				this.title = "严重错误";
 				break;
 			case ERROR_LEVEL_INFO:
 			default:
-				this.title = "Info";
+				this.title = "信息";
 		}
 	}
 

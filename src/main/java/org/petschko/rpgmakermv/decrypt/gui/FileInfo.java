@@ -21,7 +21,7 @@ class FileInfo extends JPanel {
 	 * FileInfo Constructor
 	 */
 	FileInfo() {
-		this.setBorder(BorderFactory.createTitledBorder("File-Info"));
+		this.setBorder(BorderFactory.createTitledBorder("文件信息"));
 		// todo add comps together
 	}
 

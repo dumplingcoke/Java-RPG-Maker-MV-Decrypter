@@ -165,7 +165,7 @@ public class GUI {
 
 		// Design stuff
 		this.projectFilesPanel.setLayout(new BorderLayout());
-		this.projectFilesPanel.setBorder(BorderFactory.createTitledBorder("Project-Files"));
+		this.projectFilesPanel.setBorder(BorderFactory.createTitledBorder("项目文件"));
 		this.windowPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
 		// Assign to the main comps
@@ -185,7 +185,7 @@ public class GUI {
 	 * Resets the File-List Panel
 	 */
 	void resetFileList() {
-		JLabelWrap filesListText = new JLabelWrap("Please open a RPG-Maker MV Project (\"File\" -> \"Select RPG MV/MZ Project\")");
+		JLabelWrap filesListText = new JLabelWrap("请打开RPG-Maker MV项目(点击\"文件\" -> \"选择RPG MV/MZ项目\")");
 		filesListText.setColumns(20);
 		filesListText.setForeground(Color.GRAY);
 		filesListText.setBorder(BorderFactory.createEmptyBorder(5, 7, 5, 7));
@@ -407,7 +407,7 @@ public class GUI {
 		this.getMainMenu().disableOnNoKey(true, this);
 
 		InfoWindow infoWindow = new InfoWindow(
-			"Key extracted! It may results in wrong en/decryption..."
+			"密钥已提取！但这可能会导致加/解密结果不正确..."
 		);
 
 		infoWindow.show(this.getMainWindow());

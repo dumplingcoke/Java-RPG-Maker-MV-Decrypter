@@ -146,6 +146,6 @@ public class PathException extends Exception {
 	 */
 	@Override
 	public String getMessage() {
-		return super.getMessage() + " | Path: " + (this.getPath() == null ? "null" : this.getPath());
+		return super.getMessage() + " | 路径: " + (this.getPath() == null ? "null" : this.getPath());
 	}
 }

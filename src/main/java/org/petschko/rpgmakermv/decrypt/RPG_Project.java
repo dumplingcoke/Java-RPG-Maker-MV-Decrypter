@@ -34,16 +34,17 @@ public class RPG_Project {
 	 */
 	public RPG_Project(String path, boolean verifyRPGDir) throws PathException {
 		if(path == null)
-			throw new PathException("Project-Path can't be null!", (String) null);
-		if(! File.existsDir(path))
-			throw new PathException("Project-Path doesn't exists!", path);
+			throw new PathException("项目路径不能为空!", (String) null);
+		if(!File.existsDir(path))
+			throw new PathException("项目路径不存在!", path);
 
 		this.setPath(path);
 
 		// Check if Path is a Valid-RPG-Maker-Dir
+		// 检查路径是否为有效的RPG-Maker项目目录
 		if(verifyRPGDir)
-			if(! this.verifyDir())
-				throw new PathException("Directory is not a Valid RPG-Maker-MV Directory!", path);
+		if(!this.verifyDir())
+			throw new PathException("该目录不是有效的RPG-Maker项目目录！", path);
 
 		this.loadFiles();
 		this.findSystemFile();
@@ -90,7 +91,7 @@ public class RPG_Project {
 	 */
 	public void setOutputPath(String outputPath) {
 		if(outputPath == null) {
-			PathException pe = new PathException("outputPath can't be null!", (String) null);
+			PathException pe = new PathException("输出路径不能为空！", (String) null);
 			pe.printStackTrace();
 			return;
 		}

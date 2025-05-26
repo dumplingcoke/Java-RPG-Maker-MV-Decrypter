@@ -378,7 +378,7 @@ public class File {
 	 */
 	public static String ensureDSonEndOfPath(String path) {
 		if(path == null) {
-			PathException pe = new PathException("path can't be null!", (String) null);
+			PathException pe = new PathException("路径不能为空！", (String) null);
 			pe.printStackTrace();
 			return null;
 		}
@@ -418,7 +418,7 @@ public class File {
 	 */
 	public static boolean existsDir(String path) {
 		if(path == null) {
-			PathException pe = new PathException("path can't be null!", (String) null);
+			PathException pe = new PathException("路径不能为空！", (String) null);
 			pe.printStackTrace();
 			return false;
 		}
@@ -435,7 +435,7 @@ public class File {
 	 */
 	public static boolean existsDir(String path, boolean createMissing) {
 		if(path == null) {
-			PathException pe = new PathException("path can't be null!", (String) null);
+			PathException pe = new PathException("路径不能为空！", (String) null);
 			pe.printStackTrace();
 			return false;
 		}

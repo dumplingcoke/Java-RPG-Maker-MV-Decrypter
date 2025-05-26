@@ -40,7 +40,7 @@ class ProjectInfo extends JPanel {
 	 * and a flow layout.
 	 */
 	ProjectInfo() {
-		this.setBorder(BorderFactory.createTitledBorder("Project-Info"));
+		this.setBorder(BorderFactory.createTitledBorder("项目信息"));
 		this.setLayout(new GridLayout(2, 1));
 
 		mainInfo.setBorder(BorderFactory.createEmptyBorder(5,7, 5, 7));
@@ -185,7 +185,7 @@ class ProjectInfo extends JPanel {
 	private void noProjectLayout() {
 		removeAllLayouts();
 
-		JLabel jLabel = new JLabel("No Project");
+		JLabel jLabel = new JLabel("还没打开任何项目");
 		jLabel.setForeground(Color.GRAY);
 		mainInfo.add(jLabel);
 	}
@@ -197,71 +197,71 @@ class ProjectInfo extends JPanel {
 		removeAllLayouts();
 		this.keyInfo.setLayout(new BoxLayout(this.keyInfo, BoxLayout.Y_AXIS));
 
-		this.encryptedFiles.add(new JLabel("Encrypted Files:"));
+		this.encryptedFiles.add(new JLabel("加密文件:"));
 		JLabel encryptedFilesCountLabel = new JLabel(String.valueOf(this.encryptedFilesCount));
 		if(this.encryptedFilesCount == 0)
 			encryptedFilesCountLabel.setForeground(Color.RED);
 		this.encryptedFiles.add(encryptedFilesCountLabel);
 
-		this.resourceFiles.add(new JLabel("Resource-Files:"));
+		this.resourceFiles.add(new JLabel("资源文件:"));
 		JLabel resourceFilesCountLabel = new JLabel(String.valueOf(this.resourceFilesCount));
 		if(this.resourceFilesCount == 0)
 			resourceFilesCountLabel.setForeground(Color.RED);
 		this.resourceFiles.add(resourceFilesCountLabel);
 
 		this.systemFile.add(new JLabel("System.json:"));
-		JLabel hasSystemJsonLabel = new JLabel(this.hasSystemFile ? "Found" : "Not Found");
+		JLabel hasSystemJsonLabel = new JLabel(this.hasSystemFile ? "已找到" : "未找到");
 		hasSystemJsonLabel.setForeground(this.hasSystemFile ? new Color(6, 125, 23) : Color.RED);
 		this.systemFile.add(hasSystemJsonLabel);
 
-		this.projectFile.add(new JLabel("Project-File:"));
-		JLabel hasProjectFile = new JLabel(this.hasProjectFile ? "Found" : "Not Found");
+		this.projectFile.add(new JLabel("项目文件:"));
+		JLabel hasProjectFile = new JLabel(this.hasProjectFile ? "已找到" : "未找到");
 		hasProjectFile.setForeground(this.hasProjectFile ? new Color(6, 125, 23) : Color.RED);
 		this.projectFile.add(hasProjectFile);
 
-		this.jEncryptionKey.add(new JLabel("Key: "));
-		JLabel keyLabel = new JLabel(this.encryptionKey == null ? "Not Found!" : this.encryptionKey);
+		this.jEncryptionKey.add(new JLabel("密钥: "));
+		JLabel keyLabel = new JLabel(this.encryptionKey == null ? "未找到!" : this.encryptionKey);
 		if(this.encryptionKey == null)
 			keyLabel.setForeground(Color.RED);
 		this.jEncryptionKey.add(keyLabel);
-
-		this.jHeaderLen.add(new JLabel("Header-Length: "));
+		
+		this.jHeaderLen.add(new JLabel("头部长度: "));
 		JLabel headerLabel = new JLabel(String.valueOf(this.headerLen));
 		if(this.headerLen != Decrypter.DEFAULT_HEADER_LEN && this.headerLen != 0) {
 			headerLabel.setForeground(Color.BLUE);
-			headerLabel.setText(headerLabel.getText() + " (Custom)");
+			headerLabel.setText(headerLabel.getText() + " (自定义)");
 		}
 		if(this.headerLen == 0)
 			headerLabel.setForeground(Color.RED);
 		this.jHeaderLen.add(headerLabel);
-
-		this.jSignature.add(new JLabel("Signature: "));
+		
+		this.jSignature.add(new JLabel("签名: "));
 		JLabel signatureLabel = new JLabel(this.signature == null ? "-" : this.signature);
 		if(this.signature == null)
 			signatureLabel.setForeground(Color.RED);
 		else if(! this.signature.equals(Decrypter.DEFAULT_SIGNATURE)) {
 			signatureLabel.setForeground(Color.BLUE);
-			signatureLabel.setText(signatureLabel.getText() + " (Custom)");
+			signatureLabel.setText(signatureLabel.getText() + " (自定义)");
 		}
 		this.jSignature.add(signatureLabel);
-
-		this.jVersion.add(new JLabel("Version: "));
+		
+		this.jVersion.add(new JLabel("版本: "));
 		JLabel versionLabel = new JLabel(this.version == null ? "-" : this.version);
 		if(this.version == null)
 			versionLabel.setForeground(Color.RED);
 		else if(! this.version.equals(Decrypter.DEFAULT_VERSION)) {
 			versionLabel.setForeground(Color.BLUE);
-			versionLabel.setText(versionLabel.getText() + " (Custom)");
+			versionLabel.setText(versionLabel.getText() + " (自定义)");
 		}
 		this.jVersion.add(versionLabel);
-
-		this.jRemain.add(new JLabel("Remain: "));
+		
+		this.jRemain.add(new JLabel("保留字段: "));
 		JLabel remainLabel = new JLabel(this.remain == null ? "-" : this.remain);
 		if(this.remain == null)
 			remainLabel.setForeground(Color.RED);
 		else if(! this.remain.equals(Decrypter.DEFAULT_REMAIN)) {
 			remainLabel.setForeground(Color.BLUE);
-			remainLabel.setText(remainLabel.getText() + " (Custom)");
+			remainLabel.setText(remainLabel.getText() + " (自定义)");
 		}
 		this.jRemain.add(remainLabel);
 
